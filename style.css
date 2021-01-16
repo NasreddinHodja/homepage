@@ -8,7 +8,9 @@
     --green: #50fa7b;
     --purple: #bd93f9;
     --pink: #ff79c6;
-    --blue: #8be9fd;
+    --cyan: #8be9fd;
+    --yellow: #f1fa8c;
+    --grey: #bfbfbf;
 }
 
 html {
@@ -17,18 +19,18 @@ html {
     padding: 10px;
 }
 
-body {
-    display: flex;
-    flex-direction: row;
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .card {
     background-color: var(--background);
     width: 400px;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
     border-radius: 50px;
-    padding: 10px;
+    padding: 50px;
     font-family: 'Source Code Pro', monospace;
 }
 
@@ -50,34 +52,18 @@ h3 {
     color: var(--blue);
 }
 
-.figure {
-    text-align: center;
-}
-
-img {
-    display: block;
-    margin: auto;
-    max-width: 70%;
-    height: auto;
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
-
-.bigimg{
-    max-width: 85%;
-    padding: 5px;
-}
-
 a {
     text-decoration: none;
     font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
     color: var(--pink);
 }
 
 a:visited {
     text-decoration: none;
     font-weight: bold;
-    color: var(--purple);
+    color: var(--foreground);
 }
 
 a:hover {
@@ -116,6 +102,37 @@ code {
     font-weight: bold;
 }
 
-canvas {
-    background-color: var(--background_light);
+
+.term-cmd {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.dollar {
+    color: var(--cyan);
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+    padding-left: 10px;
+    list-style-type: none;
+}
+
+li:before {
+    /* your own marker in content */
+    content: "=> ";
+    left: 0;
+    color: var(--pink);
+    font-weight: bold;
+    /* position: absolute; */
+}
+
+img {
+    width: 100px;
+    margin-left: 50px;
+    /* margin-right: auto; */
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
 }
